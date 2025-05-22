@@ -1,0 +1,22 @@
+{
+  "name": "QuickMeta",
+  "description": "osu! discussion page metadata viewer and light checker",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "quickmeta.html",
+    "default_icon": "727.png"
+  },
+  "host_permissions": [
+    "https://osu.ppy.sh/api/get_beatmaps*"
+  ],
+  "content_scripts": [
+    {
+      "js": ["scripts/content.js"],
+      "matches": [
+        "*://osu.ppy.sh/beatmapsets/*/discussion/*"
+      ]
+    }
+  ]
+
+}
